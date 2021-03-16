@@ -1,0 +1,31 @@
+{% extends 'navbar.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+</head>
+<body>
+{% block content %}
+<form class="form1" action="do_add1" method="get">
+    {% csrf_token %}
+    <br><br>
+    <label class="ne2">CAMERA SURVELLIANCE FORM</label><br><br>
+    <select class="set1"  name="location">
+        {%for s in form1%}
+        <option value="{{s.id}}">{{s.Loc_Name}}</option>
+        {%endfor%}
+    </select><br><br>
+    <select class="set1"  name="camera">
+        {%for d in form%}
+        <option value="{{d.id}}">{{d.Cameraname}}</option>
+        {%endfor%}
+    </select><br><br>
+    <input name="date" type="date" placeholder="Enter date of assigning"><br><br>
+    <input name="server" type="text" placeholder="Enter Stream Server Name"><br><br>
+    <button class="des" type="submit">ASSIGN THE CAMERA</button>
+
+</form>
+{% endblock %}
+</body>
+
+</html>

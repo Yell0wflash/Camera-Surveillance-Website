@@ -1,0 +1,28 @@
+{% extends 'navbar.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+</head>
+<body>
+{% block content %}
+<h1>LOCATION DETAILS</h1>
+
+<table id="customers">
+    <tr>
+        <th>Location Name</th>
+        <th>Location Address</th>
+        <th>Location Survelliance</th>
+        <th>Location Area</th>
+    </tr>
+    {%for s in form%}
+    <tr>
+        <td>{{s.Loc_Name}}</td>
+        <td>{{s.Loc_Address}}</td>
+        <td>{{s.Loc_Survelliance}}</td>
+        <td>{{s.Loc_Area}}</td>
+    </tr>
+    {%endfor%}
+{% endblock %}
+</body>
+</html>

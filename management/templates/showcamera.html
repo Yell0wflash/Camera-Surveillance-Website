@@ -1,0 +1,26 @@
+{% extends 'navbar.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+</head>
+<body>
+{% block content %}
+<h1>CAMERA DETAILS</h1>
+
+<table id="customers">
+    <tr>
+        <th>Camera Name</th>
+        <th>Camera Brand</th>
+        <th>Camera Details</th>
+    </tr>
+    {%for s in form%}
+    <tr>
+        <td>{{s.Camera_Name}}</td>
+        <td>{{s.Camera_Brand}}</td>
+        <td>{{s.Camera_Details}}</td>
+    </tr>
+    {%endfor%}
+    {% endblock %}
+</body>
+</html>

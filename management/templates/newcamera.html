@@ -1,0 +1,21 @@
+{% extends 'navbar.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+</head>
+<body>
+{% block content %}
+<form class="set" action="do_add1" method="get">
+    {% csrf_token %}
+    <br><br>
+    <label class="ne1">CAMERA FORM</label><br><br>
+    <input name="name" type="text" placeholder="Enter Camera Name"><br><br>
+    <input name="brand" type="text" placeholder="Enter Camera Brand"><br><br>
+    <input name="detail" type="text" placeholder="Enter camera detail">
+    <button class="des" type="submit">ADD NEW CAMERA</button>
+</form>
+{% endblock %}
+</body>
+
+</html>

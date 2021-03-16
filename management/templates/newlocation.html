@@ -1,0 +1,27 @@
+{% extends 'navbar.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+</head>
+<body>
+{% block content %}
+<form class="set" action="do_add" method="get">
+    {% csrf_token %}
+    <br><br>
+    <label class="ne1">LOCATION FORM</label><br><br>
+    <input name="name" type="text" placeholder="Enter Location Name"><br><br>
+    <input name="add" type="text" placeholder="Enter Loction Address"><br><br>
+    <select class="set1"  name="sur">
+        <option value="YES">Yes</option>
+        <option value="NO">No</option>
+        <option value="PARTIAL">Partial</option>
+    </select><br><br>
+    <input name="area" type="number" placeholder="Enter the area in sq-ft"><br><br>
+    <button class="des" type="submit">ADD NEW LOCATION</button>
+
+</form>
+{% endblock %}
+</body>
+
+</html>
